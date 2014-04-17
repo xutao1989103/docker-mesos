@@ -1,4 +1,4 @@
-Dockerfile for running an [Apache Mesos](http://mesos.apache.org) master node.
+Dockerfile for running an [Apache Mesos](http://mesos.apache.org/) master node.
 
 ## Configuration
 
