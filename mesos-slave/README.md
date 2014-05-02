@@ -10,7 +10,7 @@ to set each configuration option:
 
     $ docker run -d \
         -e MESOS_LOG_DIR=/var/log \
-        -e MESOS_ZK=[zookeeper URL] \
+        -e MESOS_MASTER=[zookeeper URL] \
         -p 5051:5051 \
         redjack/mesos-slave
 
