@@ -15,7 +15,7 @@ RUN apt-get update
 WORKDIR /tmp
 RUN \
   apt-get install -y curl openjdk-6-jre-headless && \
-  curl -s -o mesos.deb https://downloads.mesosphere.io/master/ubuntu/14.04/mesos_0.20.1-1.0.ubuntu1404_amd64.deb && \
+  curl -s -o mesos.deb https://downloads.mesosphere.io/master/ubuntu/14.04/mesos_0.21.0-1.0.ubuntu1404_amd64.deb && \
   dpkg --unpack mesos.deb && \
   apt-get install -f -y && \
   rm mesos.deb && \
