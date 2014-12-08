@@ -1,4 +1,4 @@
-FROM redjack/mesos
+FROM redjack/mesos:0.20.0
 MAINTAINER RedJack, LLC
 
 EXPOSE 5050
