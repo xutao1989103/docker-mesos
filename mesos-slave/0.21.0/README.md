@@ -1,5 +1,13 @@
 Dockerfile for running an [Apache Mesos](http://mesos.apache.org/) slave node.
 
+This image is tagged to allow you to pin your installations to a specific recent
+version of Mesos.  The following versions are available:
+
+  * `0.21.0` (aka `latest`)
+  * `0.20.1`
+  * `0.20.0`
+  * `0.19.1`
+
 ### Configuration
 
 Mesos allows you to set all [configuration

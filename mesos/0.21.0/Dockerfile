@@ -2,6 +2,8 @@ FROM ubuntu
 MAINTAINER RedJack, LLC
 
 ENV DEBIAN_FRONTEND noninteractive
+ENV MESOS_VERSION 0.21.0
+ENV MESOS_PKG_RELEASE 1.0
 
 RUN apt-get update
 
@@ -15,8 +17,8 @@ RUN apt-get update
 WORKDIR /tmp
 RUN \
   apt-get install -y curl openjdk-6-jre-headless docker.io && \
-  curl -s -o mesos.deb https://downloads.mesosphere.io/master/ubuntu/14.04/mesos_0.21.0-1.0.ubuntu1404_amd64.deb && \
-  dpkg --unpack mesos.deb && \
+  curl -s -O https://downloads.mesosphere.io/master/ubuntu/14.04/mesos_${MESOS_VERSION}-${MESOS_PKG_RELEASE}.ubuntu1404_amd64.deb && \
+  dpkg --unpack mesos_${MESOS_VERSION}-${MESOS_PKG_RELEASE}.ubuntu1404_amd64.deb && \
   apt-get install -f -y && \
-  rm mesos.deb && \
+  rm mesos_${MESOS_VERSION}-${MESOS_PKG_RELEASE}.ubuntu1404_amd64.deb && \
   apt-get clean

@@ -1,4 +1,4 @@
-FROM redjack/mesos
+FROM redjack/mesos:0.21.0
 MAINTAINER RedJack, LLC
 
 # Mesos fetcher uses unzip to extract staged zip files
